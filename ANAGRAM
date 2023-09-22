@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class AnagramChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first string: ");
+        String str1 = scanner.nextLine();
+        System.out.print("Enter second string: ");
+        String str2 = scanner.nextLine();
+        scanner.close();
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        if (Arrays.equals(charArray1, charArray2)) {
+            System.out.println(str1 + " and " + str2 + " is anagrams.");
+        } 
+          else {
+            System.out.println(str1 + " and " + str2 + "  is not an anagrams.");
+        }
+    }
+}
